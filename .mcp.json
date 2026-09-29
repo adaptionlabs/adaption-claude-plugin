@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "adaption": {
+      "url": "https://api.adaption.ai/api/v1/mcp"
+    }
+  }
+}

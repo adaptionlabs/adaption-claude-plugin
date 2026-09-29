@@ -1,0 +1,21 @@
+{
+  "name": "adaption",
+  "displayName": "Adaption",
+  "version": "0.1.0",
+  "description": "Adaption plugin for Claude Code — datasets, fine-tuning, and AutoScientist workflows powered by the Adaption MCP server",
+  "author": {
+    "name": "Adaption Labs",
+    "email": "support@adaptionlabs.ai"
+  },
+  "homepage": "https://adaptionlabs.ai",
+  "repository": "https://github.com/adaptionlabs/adaption-claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "adaption",
+    "datasets",
+    "fine-tuning",
+    "autoscientist",
+    "mcp",
+    "ai-training"
+  ]
+}
