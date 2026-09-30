@@ -1,6 +1,6 @@
 # Adaption Plugin for Claude Desktop
 
-Connect Claude to [Adaption](https://adaptionlabs.ai) for dataset management, fine-tuning, and AutoScientist workflows.
+Connect Claude to [Adaption](https://adaptionlabs.ai) for dataset management and fine-tuning workflows.
 
 ## Installation
 
@@ -13,7 +13,7 @@ Connect Claude to [Adaption](https://adaptionlabs.ai) for dataset management, fi
 
 ### Get Your API Key
 
-1. Go to [app.adaptionlabs.ai/settings/api-keys](https://app.adaptionlabs.ai/settings/api-keys)
+1. Go to [adaptionlabs.ai/app/settings](https://adaptionlabs.ai/app/settings?tab=api_keys)
 2. Create a new API key
 3. Copy and paste it when Claude Desktop asks
 
@@ -107,8 +107,7 @@ Check the status of my training job
 ## Requirements
 
 - Claude Desktop (macOS or Windows)
-- Adaption account with API access
-- API key from [app.adaptionlabs.ai/settings/api-keys](https://app.adaptionlabs.ai/settings/api-keys)
+- An Adaption account with an API key
 
 ## Building from Source
 

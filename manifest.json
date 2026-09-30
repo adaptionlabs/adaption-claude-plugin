@@ -3,7 +3,7 @@
   "manifest_version": "0.4",
   "name": "adaption",
   "version": "0.1.0",
-  "description": "Connect Claude to Adaption for dataset management, fine-tuning, and AutoScientist workflows.",
+  "description": "Connect Claude to Adaption for dataset management and fine-tuning workflows.",
   "author": {
     "name": "Adaption Labs",
     "email": "support@adaptionlabs.ai"
@@ -36,7 +36,7 @@
     "api_key": {
       "type": "string",
       "title": "Adaption API Key",
-      "description": "Get your API key at app.adaptionlabs.ai/settings/api-keys",
+      "description": "Get your API key at adaptionlabs.ai/app/settings?tab=api_keys",
       "sensitive": true,
       "required": true
     }
