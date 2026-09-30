@@ -1,32 +1,26 @@
-# Adaption Plugin for Claude Code
+# Adaption Plugin for Claude Desktop
 
-Connect Claude Code to [Adaption](https://adaptionlabs.ai) for dataset management, fine-tuning, and AutoScientist workflows.
+Connect Claude to [Adaption](https://adaptionlabs.ai) for dataset management, fine-tuning, and AutoScientist workflows.
 
 ## Installation
 
-### From Claude Plugin Directory
+### One-Click Install
 
-1. In Claude Code, run `/plugin install adaption`
-2. Or search for **"adaption"** in `/plugin` → Discover tab
+1. Download `adaption.mcpb` from [Releases](https://github.com/adaptionlabs/adaption-claude-plugin/releases)
+2. Double-click the file to install
 3. Enter your **Adaption API Key** when prompted
-4. Ready to use!
-
-### Manual Installation
-
-```bash
-git clone https://github.com/adaptionlabs/adaption-claude-plugin.git
-```
-
-Then in Claude Code:
-```
-/plugin install --plugin-dir ./adaption-claude-plugin
-```
+4. Done! ✓
 
 ### Get Your API Key
 
 1. Go to [app.adaptionlabs.ai/settings/api-keys](https://app.adaptionlabs.ai/settings/api-keys)
 2. Create a new API key
-3. Enter it when Claude Code prompts for authentication
+3. Copy and paste it when Claude Desktop asks
+
+## Supported Platforms
+
+- ✅ macOS
+- ✅ Windows
 
 ## Features
 
@@ -51,27 +45,29 @@ Then in Claude Code:
 - Explore available **domains and subdomains**
 - **Generate synthetic datasets** from specifications
 
-## Available Skills
-
-| Skill | Description |
-|-------|-------------|
-| `/adaption:adaption-dataset` | Dataset import, processing, and transformation |
-| `/adaption:adaption-training` | AutoScientist training runs |
-| `/adaption:adaption-invent` | Synthetic data generation |
-
 ## Example Usage
 
 Once installed, you can interact with Adaption through natural conversation:
 
-> "List my Adaption datasets"
+```
+List my Adaption datasets
+```
 
-> "Import this HuggingFace dataset and adapt it for fine-tuning"
+```
+Import this HuggingFace dataset and adapt it for fine-tuning
+```
 
-> "Start fine-tuning llama-3.1-8b on my adapted dataset"
+```
+Start fine-tuning llama-3.1-8b on my adapted dataset
+```
 
-> "Generate 1000 customer service examples using Invent"
+```
+Generate 1000 customer service examples using Invent
+```
 
-> "Check the status of my training job"
+```
+Check the status of my training job
+```
 
 ## MCP Tools Reference
 
@@ -110,9 +106,19 @@ Once installed, you can interact with Adaption through natural conversation:
 
 ## Requirements
 
-- Claude Code CLI
+- Claude Desktop (macOS or Windows)
 - Adaption account with API access
-- API key with MCP scopes
+- API key from [app.adaptionlabs.ai/settings/api-keys](https://app.adaptionlabs.ai/settings/api-keys)
+
+## Building from Source
+
+```bash
+git clone https://github.com/adaptionlabs/adaption-claude-plugin.git
+cd adaption-claude-plugin
+zip -r adaption.mcpb manifest.json README.md LICENSE icon.svg skills/ server/
+```
+
+Then double-click `adaption.mcpb` to install.
 
 ## Support
 

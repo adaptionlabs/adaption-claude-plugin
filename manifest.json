@@ -1,0 +1,48 @@
+{
+  "$schema": "https://raw.githubusercontent.com/anthropics/mcpb/main/schemas/mcpb-manifest-v0.4.schema.json",
+  "manifest_version": "0.4",
+  "name": "adaption",
+  "version": "0.1.0",
+  "description": "Connect Claude to Adaption for dataset management, fine-tuning, and AutoScientist workflows.",
+  "author": {
+    "name": "Adaption Labs",
+    "email": "support@adaptionlabs.ai"
+  },
+  "homepage": "https://adaptionlabs.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adaptionlabs/adaption-claude-plugin"
+  },
+  "support": "https://github.com/adaptionlabs/adaption-claude-plugin/issues",
+  "documentation": "https://docs.adaptionlabs.ai",
+  "icon": "icon.png",
+  "keywords": ["adaption", "datasets", "fine-tuning", "autoscientist", "mcp", "ai-training"],
+  "license": "MIT",
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://api.adaption.ai/api/v1/mcp",
+        "--header",
+        "Authorization:Bearer ${user_config.api_key}"
+      ]
+    }
+  },
+  "user_config": {
+    "api_key": {
+      "type": "string",
+      "title": "Adaption API Key",
+      "description": "Get your API key at app.adaptionlabs.ai/settings/api-keys",
+      "sensitive": true,
+      "required": true
+    }
+  },
+  "compatibility": {
+    "claude_desktop": ">=1.0.0",
+    "platforms": ["darwin", "win32"]
+  }
+}
