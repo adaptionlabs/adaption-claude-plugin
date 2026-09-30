@@ -26,7 +26,7 @@
       "args": [
         "-y",
         "mcp-remote",
-        "https://api.adaption.ai/api/v1/mcp",
+        "https://api.prod.adaptionlabs.ai/api/v1/mcp",
         "--header",
         "Authorization:Bearer ${user_config.api_key}"
       ]
