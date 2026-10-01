@@ -38,12 +38,12 @@ Connect Claude to [Adaption](https://adaptionlabs.ai) for dataset management and
 - Browse available **base models**
 - Get **hyperparameter recommendations**
 - Launch **AutoScientist training runs**
-- Monitor **training progress** and iterations
+- Monitor **training progress** and results
 
 ### 🔬 Invent (2 tools)
 
 - Explore available **domains and subdomains**
-- **Generate synthetic datasets** from specifications
+- **Generate synthetic datasets** from natural language descriptions
 
 ## Example Usage
 
@@ -58,7 +58,7 @@ Import this HuggingFace dataset and adapt it for fine-tuning
 ```
 
 ```
-Start fine-tuning llama-3.1-8b on my adapted dataset
+Start fine-tuning on my adapted dataset and pick a suitable base model
 ```
 
 ```
