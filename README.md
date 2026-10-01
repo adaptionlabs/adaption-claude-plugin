@@ -114,7 +114,7 @@ Check the status of my training job
 ```bash
 git clone https://github.com/adaptionlabs/adaption-claude-plugin.git
 cd adaption-claude-plugin
-zip -r adaption.mcpb manifest.json README.md LICENSE icon.svg skills/ server/
+zip -r adaption.mcpb manifest.json README.md LICENSE icon.png skills/ server/ -x '*.DS_Store'
 ```
 
 Then double-click `adaption.mcpb` to install.
