@@ -114,6 +114,7 @@ Check the status of my training job
 ```bash
 git clone https://github.com/adaptionlabs/adaption-claude-plugin.git
 cd adaption-claude-plugin
+rm -f adaption.mcpb
 zip -r adaption.mcpb manifest.json README.md LICENSE icon.png skills/ server/ -x '*.DS_Store'
 ```
 
