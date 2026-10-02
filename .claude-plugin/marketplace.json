@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "adaption",
-      "source": "..",
+      "source": ".",
       "description": "Connect Claude to Adaption for dataset management and fine-tuning workflows.",
       "version": "0.1.0",
       "author": {
