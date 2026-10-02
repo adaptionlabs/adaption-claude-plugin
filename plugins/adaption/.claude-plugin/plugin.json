@@ -16,5 +16,6 @@
     "autoscientist",
     "mcp",
     "ai-training"
-  ]
+  ],
+  "skills": "./skills"
 }
