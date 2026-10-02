@@ -4,7 +4,20 @@ Connect Claude to [Adaption](https://adaptionlabs.ai) for dataset management and
 
 ## Installation
 
-### One-Click Install
+### Option 1: Claude Code Plugin (Recommended)
+
+1. Set your API key:
+   ```bash
+   export ADAPTION_API_KEY="your_api_key_here"
+   ```
+
+2. Add the marketplace and install:
+   ```
+   /plugin marketplace add adaptionlabs/adaption-claude-plugin
+   /plugin install adaption@adaption-plugins
+   ```
+
+### Option 2: MCPB Bundle (Claude Desktop)
 
 1. Download `adaption.mcpb` from [Releases](https://github.com/adaptionlabs/adaption-claude-plugin/releases)
 2. Double-click the file to install
