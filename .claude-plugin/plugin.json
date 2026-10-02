@@ -1,0 +1,20 @@
+{
+  "name": "adaption",
+  "version": "0.1.0",
+  "description": "Connect Claude to Adaption for dataset management and fine-tuning workflows.",
+  "author": {
+    "name": "Adaption Labs",
+    "email": "support@adaptionlabs.ai"
+  },
+  "homepage": "https://adaptionlabs.ai",
+  "repository": "https://github.com/adaptionlabs/adaption-claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "adaption",
+    "datasets",
+    "fine-tuning",
+    "autoscientist",
+    "mcp",
+    "ai-training"
+  ]
+}
