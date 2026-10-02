@@ -1,0 +1,21 @@
+{
+  "name": "adaption-plugins",
+  "owner": {
+    "name": "Adaption Labs",
+    "email": "support@adaptionlabs.ai"
+  },
+  "metadata": {
+    "description": "Official Adaption plugins for Claude"
+  },
+  "plugins": [
+    {
+      "name": "adaption",
+      "source": "..",
+      "description": "Connect Claude to Adaption for dataset management and fine-tuning workflows.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Adaption Labs"
+      }
+    }
+  ]
+}
