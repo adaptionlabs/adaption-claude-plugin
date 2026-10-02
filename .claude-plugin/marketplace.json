@@ -1,21 +1,22 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "adaption-plugins",
+  "description": "Official Adaption plugins for Claude",
   "owner": {
     "name": "Adaption Labs",
-    "email": "support@adaptionlabs.ai"
-  },
-  "metadata": {
-    "description": "Official Adaption plugins for Claude"
+    "url": "https://adaptionlabs.ai"
   },
   "plugins": [
     {
       "name": "adaption",
-      "source": ".",
+      "source": "./plugins/adaption",
       "description": "Connect Claude to Adaption for dataset management and fine-tuning workflows.",
       "version": "0.1.0",
       "author": {
         "name": "Adaption Labs"
-      }
+      },
+      "category": "ai-training",
+      "homepage": "https://adaptionlabs.ai"
     }
   ]
 }
