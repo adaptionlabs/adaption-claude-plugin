@@ -79,10 +79,19 @@ rather than modifying the source.
    - `languages`: Array of target language codes
    - `sample_rate`: Share of rows to translate, between 0.01 and 1
    - `estimate: true` for cost preview
-2. Poll `get_dataset_status` until translation completes
+2. Review the estimate before launching. An estimate does not start translation.
+3. Call `translate_dataset` again with the same source `dataset_id`, `languages`,
+   and `sample_rate`, setting `estimate: false`. Save the new dataset ID returned
+   by this launch.
+4. Poll `get_dataset_status` on the **new dataset ID**, not the source, until the
+   operation finishes. If it fails, report the failure instead of treating the
+   output as complete.
 
-`localize_dataset` takes the same `sample_rate` but replaces `languages` with
-`pairs`, an array of `{ "country": "RS", "language": "sr" }` objects.
+`localize_dataset` follows the same estimate, launch, and poll sequence. It takes
+the same `sample_rate` but replaces `languages` with `pairs`, an array of
+`{ "country": "RS", "language": "sr" }` objects. Both operations create a new
+dataset containing the source rows plus their variants; they leave the source
+unchanged.
 
 ### Combine multiple datasets
 
