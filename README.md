@@ -8,16 +8,18 @@ account in the browser; no API key is needed.
 
 ## Installation
 
-### Claude Desktop
+### Claude (claude.ai and Claude Desktop)
 
-1. **Customize → Plugins → + Add → Add from a repository**
+1. **Customize → Plugins → + Add marketplace → Add from a repository**
 2. Enter `adaptionlabs/adaption-claude-plugin`
 3. Install the **adaption** plugin from the added marketplace
-4. Start a new session and ask Claude to use Adaption, for example
-   "List my Adaption datasets". When Claude asks to connect `adaption`, click
-   **Connect**, sign in, choose the organization, and click **Authorize**
+4. Sign in to Adaption. Claude asks you to connect `adaption` either right
+   after install or the first time you use it in a session (for example
+   "List my Adaption datasets"). Click **Connect**: the Adaption sign-in page
+   opens in your browser. Sign in, choose the organization, and click
+   **Authorize**
 
-The plugin's connector shows **Connects in sessions** under Connectors. That is
+If the connector shows **Connects in sessions** under Connectors, that is
 expected: Claude connects it inside a session, not from the settings page.
 
 ### Claude Code
@@ -27,16 +29,15 @@ to this server.
 
 ```bash
 claude plugin marketplace add adaptionlabs/adaption-claude-plugin
-claude plugin install adaption@adaption-plugins
+claude plugin install adaption@adaption
 ```
 
 Then run `/mcp` in Claude Code, select `plugin:adaption:adaption`, and choose
 **Authenticate**. Claude Code opens the Adaption sign-in page in your browser.
 
-### Claude.ai connector only
+### Connector only (no skills)
 
-To use the Adaption tools without the skills, for example on claude.ai in the
-browser:
+To add just the Adaption tools without the plugin's skills:
 
 1. **Settings → Connectors → Add custom connector**
 2. MCP server URL: `https://api.prod.adaptionlabs.ai/api/v1/mcp`
