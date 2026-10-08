@@ -115,8 +115,12 @@ Check the status of my training job
 git clone https://github.com/adaptionlabs/adaption-claude-plugin.git
 cd adaption-claude-plugin
 rm -f adaption.mcpb
-zip -r adaption.mcpb manifest.json README.md LICENSE icon.png skills/ server/ -x '*.DS_Store'
+zip -r adaption.mcpb manifest.json README.md LICENSE icon.png server/ -x '*.DS_Store'
+(cd plugins/adaption && zip -r ../../adaption.mcpb skills/ -x '*.DS_Store')
 ```
+
+The skills live in `plugins/adaption/skills/`; the second command adds them at
+`skills/` in the bundle, the same layout as the v0.1.0 release.
 
 Then double-click `adaption.mcpb` to install.
 
