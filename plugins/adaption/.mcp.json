@@ -2,10 +2,7 @@
   "mcpServers": {
     "adaption": {
       "type": "http",
-      "url": "https://api.prod.adaptionlabs.ai/api/v1/mcp",
-      "headers": {
-        "Authorization": "Bearer ${ADAPTION_API_KEY}"
-      }
+      "url": "https://api.prod.adaptionlabs.ai/api/v1/mcp"
     }
   }
 }

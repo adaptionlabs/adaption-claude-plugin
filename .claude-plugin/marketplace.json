@@ -1,7 +1,9 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "adaption-plugins",
-  "description": "Official Adaption plugins for Claude",
+  "metadata": {
+    "description": "Official Adaption plugins for Claude"
+  },
   "owner": {
     "name": "Adaption Labs",
     "url": "https://adaptionlabs.ai"

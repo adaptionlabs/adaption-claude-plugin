@@ -1,26 +1,58 @@
-# Adaption Plugin for Claude Desktop
+# Adaption Plugin for Claude
 
 Connect Claude to [Adaption](https://adaptionlabs.ai) for dataset management and fine-tuning workflows.
 
+The plugin bundles three skills and the remote Adaption MCP server
+(`https://api.prod.adaptionlabs.ai/api/v1/mcp`). You sign in with your Adaption
+account in the browser; no API key is needed.
+
 ## Installation
 
-### MCPB Bundle (Claude Desktop)
+### Claude Desktop
 
-1. Download `adaption.mcpb` from [Releases](https://github.com/adaptionlabs/adaption-claude-plugin/releases)
-2. Double-click the file to install
-3. Enter your **Adaption API Key** when prompted
-4. Done! ✓
+1. **Customize → Plugins → + Add → Add from a repository**
+2. Enter `adaptionlabs/adaption-claude-plugin`
+3. Install the **adaption** plugin from the added marketplace
+4. Start a new session and ask Claude to use Adaption, for example
+   "List my Adaption datasets". When Claude asks to connect `adaption`, click
+   **Connect**, sign in, choose the organization, and click **Authorize**
 
-### Get Your API Key
+The plugin's connector shows **Connects in sessions** under Connectors. That is
+expected: Claude connects it inside a session, not from the settings page.
 
-1. Go to [adaptionlabs.ai/app/settings](https://adaptionlabs.ai/app/settings?tab=api_keys)
-2. Create a new API key
-3. Copy and paste it when Claude Desktop asks
+### Claude Code
 
-## Supported Platforms
+Requires a recent Claude Code (`claude update`); older versions can't sign in
+to this server.
 
-- ✅ macOS
-- ✅ Windows
+```bash
+claude plugin marketplace add adaptionlabs/adaption-claude-plugin
+claude plugin install adaption@adaption-plugins
+```
+
+Then run `/mcp` in Claude Code, select `plugin:adaption:adaption`, and choose
+**Authenticate**. Claude Code opens the Adaption sign-in page in your browser.
+
+### Claude.ai connector only
+
+To use the Adaption tools without the skills, for example on claude.ai in the
+browser:
+
+1. **Settings → Connectors → Add custom connector**
+2. MCP server URL: `https://api.prod.adaptionlabs.ai/api/v1/mcp`
+3. Leave request headers empty, click **Add**, then **Connect** and sign in
+
+### MCPB bundle with an API key
+
+For Claude Desktop setups that can't use OAuth, the MCPB bundle connects with
+an Adaption API key instead.
+
+1. Create an API key at [adaptionlabs.ai/app/settings](https://adaptionlabs.ai/app/settings?tab=api_keys)
+2. Download `adaption.mcpb` from [Releases](https://github.com/adaptionlabs/adaption-claude-plugin/releases)
+3. Double-click the file and enter the API key when prompted
+
+Don't install the bundle alongside the plugin: both register a server named
+`adaption`.
 
 ## Features
 
@@ -44,6 +76,14 @@ Connect Claude to [Adaption](https://adaptionlabs.ai) for dataset management and
 
 - Explore available **domains and subdomains**
 - **Generate synthetic datasets** from natural language descriptions
+
+## Available Skills
+
+| Skill | Description |
+|-------|-------------|
+| `adaption-dataset` | Dataset import, processing, and transformation workflows |
+| `adaption-training` | AutoScientist training run management |
+| `adaption-invent` | Synthetic data generation with Invent |
 
 ## Example Usage
 
@@ -106,16 +146,16 @@ Check the status of my training job
 
 ## Requirements
 
-- Claude Desktop (macOS or Windows)
-- An Adaption account with an API key
+- Claude Desktop, Claude Code, or claude.ai
+- An Adaption account
 
-## Building from Source
+## Building the MCPB bundle from source
 
 ```bash
 git clone https://github.com/adaptionlabs/adaption-claude-plugin.git
 cd adaption-claude-plugin
 rm -f adaption.mcpb
-zip -r adaption.mcpb manifest.json README.md LICENSE icon.png skills/ server/ -x '*.DS_Store'
+zip -r adaption.mcpb manifest.json README.md LICENSE icon.png server/ -x '*.DS_Store'
 ```
 
 Then double-click `adaption.mcpb` to install.
