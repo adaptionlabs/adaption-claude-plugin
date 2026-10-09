@@ -13,14 +13,18 @@ account in the browser; no API key is needed.
 1. **Customize → Plugins → + Add marketplace → Add from a repository**
 2. Enter `adaptionlabs/adaption-claude-plugin`
 3. Install the **adaption** plugin from the added marketplace
-4. Sign in to Adaption. Claude asks you to connect `adaption` either right
-   after install or the first time you use it in a session (for example
-   "List my Adaption datasets"). Click **Connect**: the Adaption sign-in page
-   opens in your browser. Sign in, choose the organization, and click
-   **Authorize**
+4. Open the plugin (**Customize → Plugins → Adaption**) and go to its
+   **Connectors** tab. Next to `adaption`, click **Add** (on Team and
+   Enterprise plans an Owner clicks **Add for your team**), keep the detected
+   settings, and click **Connect**
+5. The Adaption sign-in page opens in your browser. Sign in, choose the
+   organization, and click **Authorize**
+6. Start a new chat and ask, for example, "List my Adaption datasets"
 
-If the connector shows **Connects in sessions** under Connectors, that is
-expected: Claude connects it inside a session, not from the settings page.
+Chat only uses the plugin's connector after it is added on the plugin's
+Connectors tab. Cowork and the desktop app's Code tab load it automatically and
+ask you to connect the first time a tool is used. If the connector shows
+**Connects in sessions** under Customize → Connectors, that is expected.
 
 ### Claude Code
 
