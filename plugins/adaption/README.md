@@ -14,10 +14,17 @@ The plugin adds the remote Adaption MCP server
 
 ## Sign in
 
-The server uses OAuth; no API key is needed. When Claude asks to connect
-`adaption`, click **Connect**, sign in with your Adaption account, choose the
-organization, and click **Authorize**. In Claude Code, run `/mcp`, select
-`plugin:adaption:adaption`, and choose **Authenticate**.
+The server uses OAuth; no API key is needed.
+
+- **Chat (claude.ai and Claude Desktop):** open the plugin's **Connectors**
+  tab, click **Add** next to `adaption` (an Owner clicks **Add for your team**
+  on Team and Enterprise plans), then **Connect**
+- **Cowork:** click **Connect** when Claude asks to connect `adaption`
+- **Claude Code:** run `/mcp`, select `plugin:adaption:adaption`, and choose
+  **Authenticate**
+
+In each case the Adaption sign-in page opens in your browser: sign in, choose
+the organization, and click **Authorize**.
 
 ## Example prompts
 
