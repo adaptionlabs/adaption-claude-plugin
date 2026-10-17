@@ -114,6 +114,49 @@ Generate 1000 customer service examples using Invent
 Check the status of my training job
 ```
 
+### Find a dataset before importing (Claude Code)
+
+Use [Parallel Search MCP](https://docs.parallel.ai/integrations/mcp/search-mcp)
+for optional web search and page fetching while choosing a public dataset.
+Search runs in Fast mode, with no Parallel account or API key needed. Anonymous
+access is intended for exploration and light use; service rate limits apply.
+
+After installing the Adaption plugin, run this from the project where you want
+to research datasets:
+
+```bash
+claude mcp add --transport http --scope local parallel-search https://search.parallel.ai/mcp \
+  --header "User-Agent: adaption-claude-plugin"
+```
+
+This adds a separate server for this project in your personal Claude Code
+configuration. It does not change the Adaption plugin or its sign-in. Run `/mcp`
+in Claude Code and confirm that `parallel-search` is connected.
+
+Try this prompt:
+
+```text
+Use parallel-search to find three public Hugging Face datasets for English
+customer-support intent classification. Fetch their dataset cards and compare
+the task, language, license, and available columns. Cite the source URLs and
+mark missing information as unknown. Do not import or launch processing yet.
+```
+
+Before importing, review the chosen dataset's card and license for your use case,
+then open its Files and versions tab to verify the exact file paths and schema.
+Search results and fetched pages may omit files or metadata. Adaption's
+`import_dataset` needs the dataset URL in `source.url` and an explicit
+`source.files` array for Hugging Face imports; a dataset URL alone is not enough.
+Ask Claude to import only the dataset and files you selected, following the
+[dataset skill](plugins/adaption/skills/adaption-dataset/SKILL.md#example-workflows).
+Review an adaptation cost estimate before launching adaptation.
+
+To remove the optional server for this project:
+
+```bash
+claude mcp remove --scope local parallel-search
+```
+
 ## MCP Tools Reference
 
 ### Dataset Tools

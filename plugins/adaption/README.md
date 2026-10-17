@@ -34,6 +34,9 @@ the organization, and click **Authorize**.
 
 Tools that launch adaptation, generation, or training spend Adaption credits.
 
+For optional web research before importing, see
+[Find a dataset before importing (Claude Code)](../../README.md#find-a-dataset-before-importing-claude-code).
+
 ## Support
 
 - Documentation: [docs.adaptionlabs.ai](https://docs.adaptionlabs.ai)
