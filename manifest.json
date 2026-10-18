@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "description": "Connect Claude to Adaption for dataset management and fine-tuning workflows.",
   "author": {
-    "name": "Adaption Labs",
+    "name": "Adaption",
     "email": "support@adaptionlabs.ai"
   },
   "homepage": "https://adaptionlabs.ai",
