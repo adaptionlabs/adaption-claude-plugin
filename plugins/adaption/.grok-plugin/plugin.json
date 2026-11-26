@@ -1,0 +1,17 @@
+{
+  "name": "adaption",
+  "version": "0.2.0",
+  "description": "Adaption datasets and fine-tuning in Grok Build (MCP server + skills). Import, adapt, augment and translate datasets, generate synthetic datasets, and launch and monitor AutoScientist fine-tuning runs.",
+  "author": {
+    "name": "Adaption",
+    "email": "support@adaptionlabs.ai",
+    "url": "https://adaptionlabs.ai"
+  },
+  "homepage": "https://adaptionlabs.ai",
+  "repository": "https://github.com/adaptionlabs/adaption-claude-plugin",
+  "license": "MIT",
+  "keywords": ["adaption", "adaption ai", "adaption mcp", "autoscientist"],
+  "logo": "assets/logo.svg",
+  "skills": "./skills",
+  "mcpServers": "./grok.mcp.json"
+}

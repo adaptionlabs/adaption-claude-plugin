@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "adaption": {
+      "type": "http",
+      "url": "https://api.prod.adaptionlabs.ai/api/v1/mcp?source=grok-plugin",
+      "headers": {
+        "Authorization": "Bearer ${ADAPTION_API_KEY}",
+        "X-Adaption-Source": "grok-plugin"
+      }
+    }
+  }
+}
