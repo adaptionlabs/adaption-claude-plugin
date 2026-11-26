@@ -39,6 +39,33 @@ claude plugin install adaption@adaption
 Then run `/mcp` in Claude Code, select `plugin:adaption:adaption`, and choose
 **Authenticate**. Claude Code opens the Adaption sign-in page in your browser.
 
+### Grok Build
+
+The same plugin installs in [Grok Build](https://github.com/xai-org/grok-build).
+Grok Build connects with an Adaption API key instead of OAuth.
+
+1. Create an API key at [adaptionlabs.ai/app/settings](https://adaptionlabs.ai/app/settings?tab=api_keys)
+2. Put it in your environment, for example in `~/.zshrc`:
+
+   ```bash
+   export ADAPTION_API_KEY=pt_live_...
+   ```
+
+3. Install the plugin:
+
+   ```bash
+   grok plugin install adaptionlabs/adaption-claude-plugin#plugins/adaption
+   ```
+
+4. Check the connection with `grok mcp doctor`. The `adaption` server should
+   show "handshake OK" and its tools
+
+Grok Build reads `.grok-plugin/plugin.json`, which points to
+`grok.mcp.json`. That file sends the key as `Authorization: Bearer
+${ADAPTION_API_KEY}` to `https://api.prod.adaptionlabs.ai/api/v1/mcp`. The
+plugin calls no other network endpoint. Claude uses `.claude-plugin/plugin.json`
+and `.mcp.json` as before.
+
 ### Connector only (no skills)
 
 To add just the Adaption tools without the plugin's skills:
@@ -151,8 +178,8 @@ Check the status of my training job
 
 ## Requirements
 
-- Claude Desktop, Claude Code, or claude.ai
-- An Adaption account
+- Claude Desktop, Claude Code, claude.ai, or Grok Build
+- An Adaption account (and an API key for Grok Build)
 
 ## Building the MCPB bundle from source
 

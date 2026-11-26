@@ -14,7 +14,7 @@ The plugin adds the remote Adaption MCP server
 
 ## Sign in
 
-The server uses OAuth; no API key is needed.
+Claude signs in with OAuth; no API key is needed.
 
 - **Chat (claude.ai and Claude Desktop):** open the plugin's **Connectors**
   tab, click **Add** next to `adaption` (an Owner clicks **Add for your team**
@@ -25,6 +25,11 @@ The server uses OAuth; no API key is needed.
 
 In each case the Adaption sign-in page opens in your browser: sign in, choose
 the organization, and click **Authorize**.
+
+- **Grok Build:** set `ADAPTION_API_KEY` to an Adaption API key (create one
+  at [adaptionlabs.ai/app/settings](https://adaptionlabs.ai/app/settings?tab=api_keys)).
+  Grok Build sends it as `Authorization: Bearer ${ADAPTION_API_KEY}` to the
+  same server (see `grok.mcp.json`). Check with `grok mcp doctor`
 
 ## Example prompts
 
